@@ -1,0 +1,24 @@
+{
+  "name": "gestureslide",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Computer vision based hands-free presentation controller. Phase 4 turns PDF pages from Thumb_Up and Thumb_Down.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:gestures": "node scripts/test-gesture-commands.mjs",
+    "postinstall": "node scripts/copy-pdfjs-assets.mjs && node scripts/copy-mediapipe-assets.mjs"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.1.0",
+    "pdfjs-dist": "6.4.299",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.4"
+  }
+}
